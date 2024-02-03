@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "install" : "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm install\" \"cd server && npm install\"",
     "start": "vite",
     "build": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"vite build\" \"cd server && npm run start\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
