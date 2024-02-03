@@ -3,7 +3,7 @@
     "name": "my-app",
     "builds": [
         {
-            "src": "package.json",
+            "src": "./server.js",
             "use": "@vercel/node"
         }
     ],
