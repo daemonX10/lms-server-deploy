@@ -34,10 +34,10 @@ app.use('/', (req, res) => {
     }
 });
 
-app.use('/api/v1/user',userRoutes);
-app.use('/api/v1/course',courseRoutes);
-app.use('/api/v1/payment',paymentRoutes);
-app.use('/api/v1', miscesllaneousRoutes);
+app.use('/user',userRoutes);
+app.use('/course',courseRoutes);
+app.use('/payment',paymentRoutes);
+app.use('', miscesllaneousRoutes);
 
 app.use('*',(req,res)=>{
     res.status(404).send('404, Page Not Found');
