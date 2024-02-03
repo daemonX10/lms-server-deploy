@@ -7,13 +7,10 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
+    "rewrite": [
         {
             "src": "/(.*)",
             "dest": "/"
         }
-    ],
-    "env": {
-        "CUSTOM_ENV_VARIABLE": "my-value"
-    }
+    ]
 }

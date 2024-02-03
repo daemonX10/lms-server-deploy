@@ -23,9 +23,9 @@ app.use(cors({
 }));
 
 
-app.use('/damodar', (req, res) => {
+app.use('/', (req, res) => {
     try {
-        res.send('Hello from damodar');
+        res.json.send('Hello from damodar');
     } catch (error) {
         res.status(500).json({
             success:false,
