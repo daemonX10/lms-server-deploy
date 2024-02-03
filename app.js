@@ -23,9 +23,9 @@ app.use(cors({
 }));
 
 
-app.use('/', (req, res) => {
+app.use('/damodar', (req, res) => {
     try {
-        res.json.send('Hello from damodar');
+        res.send('Hello from damodar');
     } catch (error) {
         res.status(500).json({
             success:false,
@@ -34,10 +34,10 @@ app.use('/', (req, res) => {
     }
 });
 
-app.use('/user',userRoutes);
-app.use('/course',courseRoutes);
-app.use('/payment',paymentRoutes);
-app.use('', miscesllaneousRoutes);
+app.use('/api/v1/user',userRoutes);
+app.use('/api/v1/course',courseRoutes);
+app.use('/api/v1/payment',paymentRoutes);
+app.use('/api/v1', miscesllaneousRoutes);
 
 app.use('*',(req,res)=>{
     res.status(404).send('404, Page Not Found');
